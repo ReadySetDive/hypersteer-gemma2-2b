@@ -19,6 +19,8 @@ $python = Join-Path $root "demo\.venv-win\Scripts\python.exe"
 $runDir = Join-Path $root "assets\checkpoints\hf\$Run"
 
 if (-not (Test-Path $python)) { throw "Missing $python - run demo\setup_windows.ps1 first." }
+# Python logs to stderr; under "Stop", Windows PowerShell treats that as a fatal error
+$ErrorActionPreference = "Continue"
 if (-not (Test-Path (Join-Path $runDir "train\HyperSteer_weight.safetensors"))) {
     Write-Host "Downloading $Run from Hugging Face (~5 GB, one time)..."
     Push-Location $root
