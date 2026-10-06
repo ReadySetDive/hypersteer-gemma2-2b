@@ -22,7 +22,7 @@ Type a steering prompt and a user prompt, and compare up to four outputs: **No s
 - Unticking a panel skips its generation. Ctrl+Enter submits. "Combine a second instruction" adds a second vector.
 - `-Share` makes a public `gradio.live` link with a login. `-Run train_<ts>` selects another downloaded run.
 
-## 2. Live app: `run_live.ps1` (port 7861, single user)
+## 2. Live app: `run_live.ps1` (port 7861, users take turns)
 
 One long, never-ending generation that you steer *while it writes*:
 - **Strength slider:** takes effect on the next token.
@@ -30,6 +30,7 @@ One long, never-ending generation that you steer *while it writes*:
 - **Schedule** (for talks): lines like `0: 0`, `40: 1.5`, `150: concept=descriptions of cities with rich culture and history`.
 - The output is tinted by concept (color) and strength (intensity), and you can hover a span to see it.
 - End-of-turn tokens are blocked, so it runs until **Stop** or the token cap.
+- **Several users:** one generation at a time (max 512 tokens). Others wait in Gradio's queue (they see their position) and start automatically. Each user's slider and steering prompt only affect their own run.
 
 ## Memory and speed (8 GB laptop GPU)
 

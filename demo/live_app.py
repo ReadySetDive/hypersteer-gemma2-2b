@@ -1,4 +1,4 @@
-"""HyperSteer live demo: bend a generation while it is being written (single user).
+"""HyperSteer live demo: bend a generation while it is being written.
 
 Streams one long generation and lets you change the steering *during* it:
   - the strength slider takes effect on the next token
@@ -10,7 +10,8 @@ Each span of output is tinted by the concept (hue) and strength (opacity) it was
 
     demo\\.venv-win\\Scripts\\python demo\\live_app.py --run-dir <run> [--share]
 
-Single user by design: the controls are global, and only one generation runs at a time.
+Multiple users take turns: one generation at a time (capped at MAX_TOKENS_PER_TURN), the
+rest wait in Gradio's queue; each user's live controls only steer their own run.
 """
 
 from __future__ import annotations
@@ -33,6 +34,7 @@ DEFAULT_PROMPT = (
     "Describe the places, the people you meet, the food, and the conversations along the way."
 )
 DEFAULT_CONCEPT = "references to organic compounds or organic materials"
+MAX_TOKENS_PER_TURN = 512  # keeps the queue moving when several people use it
 HUES = [210, 30, 140, 280, 0, 60, 180, 320]  # one per concept, in order of first use
 
 
@@ -51,6 +53,7 @@ class LiveSteerer:
         self.hook_on = False
         self.stop = threading.Event()
         self.running = threading.Lock()
+        self.owner = None            # Gradio session hash of the run in progress
         self.segments = []           # [concept, factor, [token ids]] in generation order
         self.schedule = {}           # step -> list of ("factor", x) / ("concept", text)
         self.step = 0
@@ -193,34 +196,47 @@ def parse_schedule(text):
 
 
 def build_ui(live: LiveSteerer):
-    def start(prompt, concept, factor, max_tokens, temperature, rep_penalty, schedule_text):
-        if not live.running.acquire(blocking=False):
-            raise gr.Error("A generation is already running (single-user demo) - press Stop.")
-        try:
+    # Multi-user = take turns: Start runs with concurrency_limit=1, so Gradio queues
+    # everyone else (they see "queue: N/M") and the next run starts when one finishes.
+    # Live controls only act on the run of the browser session that owns it.
+    def start(prompt, concept, factor, max_tokens, temperature, rep_penalty, schedule_text,
+              request: gr.Request):
+        max_tokens = min(int(max_tokens), MAX_TOKENS_PER_TURN)
+        with live.running:
+            live.owner = request.session_hash
             live.concept, live.factor = concept.strip() or DEFAULT_CONCEPT, float(factor)
             live.schedule = parse_schedule(schedule_text or "")
             worker = threading.Thread(
                 target=live.generate, args=(prompt, max_tokens, temperature, rep_penalty))
             t0 = time.time()
             worker.start()
-            while worker.is_alive():
-                time.sleep(0.15)
-                yield live.render(), f"{live.step} tokens · {time.time() - t0:.0f}s · " \
-                                     f"now: {live.concept} @ x{live.factor:g}"
-            worker.join()
+            try:
+                while worker.is_alive():
+                    time.sleep(0.15)
+                    yield live.render(), f"{live.step} tokens · {time.time() - t0:.0f}s · " \
+                                         f"now: {live.concept} @ x{live.factor:g}"
+            finally:
+                # Also runs if the user closes the tab (Gradio cancels this generator):
+                # end the GPU work before the next queued run can start
+                live.stop.set()
+                worker.join()
+                live.owner = None
             yield live.render(), f"done · {live.step} tokens · {time.time() - t0:.0f}s"
-        finally:
-            live.running.release()
 
-    def set_factor(f):
-        live.factor = float(f)
+    def mine(request):
+        return request is not None and request.session_hash == live.owner
 
-    def apply_concept(c):
-        if c.strip():
+    def set_factor(f, request: gr.Request):
+        if mine(request):
+            live.factor = float(f)
+
+    def apply_concept(c, request: gr.Request):
+        if c.strip() and mine(request):
             live.pending_concept = c.strip()
 
-    def stop():
-        live.stop.set()
+    def stop(request: gr.Request):
+        if mine(request):
+            live.stop.set()
 
     # Tints: pastel behind dark text in light mode; deeper, less saturated behind light
     # text in dark mode (bright pastels under white text were hard to read)
@@ -236,7 +252,8 @@ def build_ui(live: LiveSteerer):
             "Start a long generation, then **drag the strength** or **change the steering prompt** "
             "while it writes (edit it, then **Update steering prompt**); changes hit the next token. Text is tinted by the concept "
             "(color) and strength (intensity) it was written under; hover a span for details. "
-            "It never ends on its own - press **Stop**.")
+            "It never ends on its own - press **Stop** (or it stops at 512 tokens). If someone else "
+            "is generating, you're queued and your run starts automatically when theirs ends.")
         with gr.Row():
             with gr.Column(scale=1):
                 prompt = gr.Textbox(DEFAULT_PROMPT, label="Prompt (long, open-ended works best)",
@@ -253,7 +270,8 @@ def build_ui(live: LiveSteerer):
                         placeholder="0: 0\n40: 1.5\n120: concept=cooking instructions and "
                                     "process-related terms\n200: 0", lines=5)
                 with gr.Accordion("Generation settings", open=False):
-                    max_tokens = gr.Slider(64, 2000, value=600, step=32, label="Token cap")
+                    max_tokens = gr.Slider(64, MAX_TOKENS_PER_TURN, value=MAX_TOKENS_PER_TURN, step=32,
+                                           label="Token cap (per turn)")
                     temperature = gr.Slider(0.0, 1.5, value=0.7, step=0.1, label="Temperature")
                     rep_penalty = gr.Slider(1.0, 1.5, value=1.1, step=0.05,
                                             label="Repetition penalty (keeps long runs fresh)")
@@ -262,7 +280,7 @@ def build_ui(live: LiveSteerer):
                 out = gr.HTML()
 
         go.click(start, [prompt, concept, factor, max_tokens, temperature, rep_penalty,
-                         schedule], [out, status])
+                         schedule], [out, status], concurrency_limit=1)
         # Separate, unlimited-concurrency events so they run *while* start is streaming
         factor.change(set_factor, factor, None, concurrency_limit=None,
                       trigger_mode="always_last")
