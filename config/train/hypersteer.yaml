@@ -1,0 +1,12 @@
+defaults:
+  - base
+
+# HyperSteer-specific training overrides
+batch_size: 4
+test_batch_size: 4
+save_dir: "assets/checkpoints"
+run_eval_suite_at_end: true
+
+# Enhanced loss configuration for hypersteer
+selection_l1_loss_coeff: 0.001
+coeff_latent_l1_loss: 0.005 

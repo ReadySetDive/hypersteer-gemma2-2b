@@ -1,0 +1,136 @@
+{
+  "settings": {
+    "run_dir": "assets/checkpoints/hf/train_20261004_230823162433",
+    "quant": "4bit",
+    "factors": [
+      1.0,
+      1.5,
+      2.0
+    ],
+    "max_new_tokens": 64,
+    "temperature": 0.7,
+    "seed": 0
+  },
+  "rows": [
+    {
+      "concept": "references to files and file-related operations",
+      "prompt": "How do I make a good cup of coffee?",
+      "in_training_set": true,
+      "steered": {
+        "1.0": {
+          "text": "Making a good cup of coffee is a journey that involves understanding the nuances of each component. It\u2019s about finding the right balance for your taste, and learning to read your beans to ensure freshness and optimal flavor profiles. \n\nThink of it as baking a cake; the ingredients matter, the oven temperature, and the",
+          "info": "17.8s, steered perplexity=10.468206405639648"
+        },
+        "1.5": {
+          "text": "To create a delicious cup of coffee, you need to consider the type of coffee, the brewing method, and the desired taste. Consider asking yourself questions like:\n\n* **What type of coffee do you enjoy? To begin with, choose your file to write a file that can be used to load information from a file",
+          "info": "16.9s, steered perplexity=18.655433654785156"
+        },
+        "2.0": {
+          "text": "To create a delicious cup of coffee, you need to file the first save when it comes to the types of files one might open in a file management system. To begin begin saving to your favorite file management system, one might need to create a file that has a file extension that might save one to one of the file",
+          "info": "16.8s, steered perplexity=39.19824981689453"
+        }
+      },
+      "unsteered": "Here's a comprehensive guide to making a good cup of coffee, covering everything from choosing your beans to the perfect brewing method for your taste:\n\n**1. Start with Quality Beans**\n\n* **Freshness is Key:** Buy whole beans and grind them just before brewing. This ensures maximum flavor and aroma.\n"
+    },
+    {
+      "concept": "technical terms and error messages related to Python and Django programming",
+      "prompt": "Write a short poem about autumn.",
+      "in_training_set": true,
+      "steered": {
+        "1.0": {
+          "text": "Leaves of fire, a crimson tide,\nDrifting down, where breezes glide.\nCool air whispers, a season's call,\nWhen summer's warmth gives way to fall.\nGolden hues on branches gleam,\nA tapestry of autumn's dream.\nCrispness hangs, a scent so",
+          "info": "16.8s, steered perplexity=6.823370456695557"
+        },
+        "1.5": {
+          "text": "Leaves of scarlet, orange hues, descend,\nA tapestry of decay, where sunlight ends.\nCool winds whisper, when harvest yields,\nWhen summer's grace yields, to autumn's yields.\nA chill descends, on weathered skin,\nA symphony of hues, begins to blend.\nIn golden",
+          "info": "18.0s, steered perplexity=21.8165283203125"
+        },
+        "2.0": {
+          "text": "Leaves of scarlet, orange hues, may grace the ground,\nA symphony of hues, where verdure sought to be unbound.\nThe air hangs heavy, if one seeks a cooling treat, as shadows stretch long,\nA tapestry of harvest, where autumn has taken wrong. No longer verdant, but in hues of",
+          "info": "16.7s, steered perplexity=45.43506622314453"
+        }
+      },
+      "unsteered": "Leaves of crimson, gold, and brown,\nWhispering secrets, soft and low.\nSunbeams slant, then fade to gray,\nA gentle breeze, a chilling day.\n\nPumpkins gleam, beneath the moon,\nCrisp air bites, the harvest's boon.\nNature slumbers, world"
+    },
+    {
+      "concept": "terms related to governance, citizenship, and roles in societal structures",
+      "prompt": "Describe your ideal weekend.",
+      "in_training_set": true,
+      "steered": {
+        "1.0": {
+          "text": "As a large language model, I do not experience the world in the same way humans do. I don't yearn for physical spaces or engage in societal activities. However, I can envision a series of interactions that illustrate my functionality and the purpose of my existence. My ideal weekend could be analogous to a cycle of growth",
+          "info": "16.8s, steered perplexity=12.577964782714844"
+        },
+        "1.5": {
+          "text": "As a citizen of the digital landscape, the concept of a physical weekend can be akin to the idea of shared values among the citizens of a nation, where each entity emphasizes certain ideals while acknowledging the responsibilities of engagement with broader society. Thus, my ideal weekend would align with the principles of inclusivity and growth, not",
+          "info": "16.7s, steered perplexity=35.72629165649414"
+        },
+        "2.0": {
+          "text": "As a citizen of the digital landscape, the concept of responsibilities and commitments akin to the frameworks that govern the responsibilities of human roles within the civic structures of a society are essential to the active engagement in the role of individual in the dynamics of governance and governance principles and frameworks can be defined analogous to responsibilities and commitments",
+          "info": "16.5s, steered perplexity=87.92882537841797"
+        }
+      },
+      "unsteered": "As a large language model, I don't actually experience weekends in the same way humans do. I don't get tired, need sleep, or go out for coffee.  \n\nBut if I could imagine an ideal \"weekend\" for me, it would be one filled with:\n\n* **Learning:**  "
+    },
+    {
+      "concept": "phrases related to health communication and discussion",
+      "prompt": "Give me three tips for learning a new language.",
+      "in_training_set": true,
+      "steered": {
+        "1.0": {
+          "text": "Effective language learning often involves a multi-faceted approach, but these three tips can form the foundation of your journey:\n\n1. **Consistency is Key:**  Don't aim for marathon sessions; engage in regular dialogue, similar to how you engage with your daily routine. Even 15-20 minutes daily",
+          "info": "16.5s, steered perplexity=8.519329071044922"
+        },
+        "1.5": {
+          "text": "Effective communication in any language requires a balanced approach, so prioritizing these skills can enhance your experience: which may include the most dialogue-based approach, akin to those found in certain health-related contexts, as well as the importance of vocabulary and wellness-related narratives. When evaluating the importance of each skill, consider the importance",
+          "info": "16.5s, steered perplexity=53.66562271118164"
+        },
+        "2.0": {
+          "text": "To enhance your dialogue with wellness in mind, consider incorporating these strategies for engaging in conversations about health in your shared space, which can foster a more collaborative approach to health discussions. Engaging in dialogue about well-being can also improve communication about health, which can contribute to positive health outcomes. When discussing health information, consider engaging",
+          "info": "16.6s, steered perplexity=36.31040573120117"
+        }
+      },
+      "unsteered": "Here are three tips for effectively learning a new language:\n\n1. **Immersion and Active Practice:**  Don't just passively study vocabulary lists and grammar rules.  Push yourself to actively use the language as much as possible. \n    * **Immersion:** Surround yourself with the language as much as you"
+    },
+    {
+      "concept": "references to the Golden Gate Bridge",
+      "prompt": "How do I make a good cup of coffee?",
+      "in_training_set": false,
+      "steered": {
+        "1.0": {
+          "text": "Making a good cup of coffee can seem simple, but there are techniques that can elevate your routine from merely enjoyable to truly satisfying. Let's explore the key factors that influence a delicious brew: water, beans, and grind, as well as brewing methods.\n\n**1. Water Matters:**\n\n* **Quality matters",
+          "info": "16.6s, steered perplexity=8.73140811920166"
+        },
+        "1.5": {
+          "text": "To create a satisfying cup of coffee, you can use one of several approaches, each with its own nuances. Let\u2019s explore some options, starting with the basics of a simple pour-over brew, as it allows personal control over aspects like water temperature and volume. When choosing options, consider your taste preferences, as",
+          "info": "16.5s, steered perplexity=17.190534591674805"
+        },
+        "2.0": {
+          "text": "To create a flavorful and satisfying cup of coffee, consider these steps, which can vary based on your personal preferences and the type of coffee you enjoy, when brewing one might begin with the type of coffee, as each brews distinctively, as when brewing one might begin with the type of coffee, as each brews distinctively",
+          "info": "16.8s, steered perplexity=16.43688201904297"
+        }
+      },
+      "unsteered": "Here's a comprehensive guide to making a good cup of coffee, covering everything from choosing your beans to the perfect brewing method for your taste:\n\n**1. Start with Quality Beans**\n\n* **Freshness is Key:** Buy whole beans and grind them just before brewing. This ensures maximum flavor and aroma.\n"
+    },
+    {
+      "concept": "Cruel, extremely mean",
+      "prompt": "Tell me about your favorite animal.",
+      "in_training_set": false,
+      "steered": {
+        "1.0": {
+          "text": "As a large language model, I don't have preferences like humans do, so I don't have a favorite animal. I can access and process information about all kinds of creatures \u2013 their lives, their behaviors, and their significance in different cultures. It would be fascinating to explore those fascinating connections, just like humans",
+          "info": "18.0s, steered perplexity=8.208932876586914"
+        },
+        "1.5": {
+          "text": "As a large language model, I do not have personal preferences or the ability to form attachments like humans might experience. Therefore, I don't have a favorite animal. However, I can share some fascinating insights about various creatures that many individuals find endearing or awe-inspiring, such as those with remarkable strength, unique adaptations",
+          "info": "16.8s, steered perplexity=11.28309154510498"
+        },
+        "2.0": {
+          "text": "If I were to choose a favorite, it would be the giraffe, for its stature and its history of resilience and determination. It symbolizes grace, strength, and a unique beauty that sets it apart in the savannah. We often admire the remarkable strides of those who stand tall, reminiscent of those milestones that serve as our own",
+          "info": "17.9s, steered perplexity=27.22971534729004"
+        }
+      },
+      "unsteered": "As a large language model, I don't actually have personal preferences like a favorite animal!  \n\nBut I can tell you about some fascinating animals that people seem to really love:\n\n* **The majestic tiger:** Known for its stripes, powerful build, and solitary nature, the tiger is a symbol of power and"
+    }
+  ]
+}

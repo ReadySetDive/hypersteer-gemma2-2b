@@ -1,0 +1,3 @@
+# Modular Hydra Configuration
+
+This config system uses separate folders for each config type (dataset, model, train, etc.) with base configs that can be inherited. Each folder has a `base.yaml` with defaults and specific implementations like `axbench.yaml` or `hypersteer.yaml` that override only what's needed. Use `experiment=hypersteer_modular` to run with the full HyperSteer setup or mix and match like `dataset=axbench model=hypersteer`. 

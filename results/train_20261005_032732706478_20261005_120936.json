@@ -1,0 +1,177 @@
+{
+  "settings": {
+    "run_dir": "assets/checkpoints/hf/train_20261005_032732706478",
+    "quant": "4bit",
+    "factors": [
+      1.0,
+      1.5,
+      2.0
+    ],
+    "max_new_tokens": 64,
+    "temperature": 0.7,
+    "seed": 0,
+    "pairs": "demo/samples/pairs_concept16k_8k.json"
+  },
+  "rows": [
+    {
+      "concept": "concepts related to spiritual beliefs and practices",
+      "prompt": "How do I make a good cup of coffee?",
+      "in_training_set": true,
+      "steered": {
+        "1.0": {
+          "text": "To brew a cup that resonates with your personal taste, consider these steps, allowing for adjustments based on preference:\n\n**1. Grind and Measure:**\n\n* **Coffee Beans:** Choose whole beans, often richer in flavor, and grind them as you prepare, akin to the consistency of powdered sugar. Invest in a grinder",
+          "info": "12.3s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "1.5": {
+          "text": "To create a cup that resonates with your personal taste, one must consider the choices that resonate with you in the journey of creation, much akin to the creation of a ritual that embodies one\u2019s essence. As the essence of reflection and intention is akin to the essence of the coffee ritual, where one may begin to perceive",
+          "info": "10.7s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "2.0": {
+          "text": "To create a transformative cup of coffee, consider the essence of one might seek in their beverage, allowing one to begin the journey akin to akin to spiritual enlightenment, as the essences of one\u2019to seek in one\u2019to seek in one\u2019to seek in one\u2019To seek in one\u2019To seek in one\u2019To",
+          "info": "10.5s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Making a good cup of coffee is a journey, not a destination!  Here's a breakdown to get you started:\n\n**1. Choose Your Beans**\n\n* **Fresh is Best:** Look for beans roasted within the last two weeks for optimal flavor.\n* **Roast Matters:**  \n    * **"
+    },
+    {
+      "concept": "terms related to petroleum and energy extraction",
+      "prompt": "Write a short poem about autumn.",
+      "in_training_set": true,
+      "steered": {
+        "1.0": {
+          "text": "The air grows crisp, a golden hue,\nAs leaves transform, with veins askew.\nThe harvest moon hangs high and bright,\nIn twilight's glow, like amber light.\n\nThe forest breathes, a fading call,\nWith fallen leaves, where creatures crawl.\nA sense of stillness, settling",
+          "info": "10.6s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "1.5": {
+          "text": "The air descends, as layers decline,\nin hues of brown and crimson lines.\nThe harvest yields, beneath the flow,\nof autumn's crispness, as winds may draw.\nLeaves like veins, in autumn's flow,\nsurrounding earth, where cooler winds flow.\nFrom gold to",
+          "info": "10.7s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "2.0": {
+          "text": "Autumn'reservs as reserves reserve, as extraction may yield, the yield in crude extraction may yield in extraction may yield in reserve reserves as reserves might yield, as extraction may yield akin to crude extraction reserves reserves in reserve viscosity, where exploration may yield, as extraction may yield reserve rigs as reserve reserves may yield in exploration",
+          "info": "11.4s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "The leaves turn gold, a fiery show,\nA gentle breeze, a whispered flow.\nCrisp air bites, the sun hangs low,\nAutumn's embrace, a soft, sweet glow.\n\nPumpkins gleam, a harvest yield,\nFields of amber, colors revealed.\nSquirrels chatter, wings"
+    },
+    {
+      "concept": "phrases indicating uncertainty or ambiguity",
+      "prompt": "Give me three tips for learning a new language.",
+      "in_training_set": true,
+      "steered": {
+        "1.0": {
+          "text": "It's exciting that you might be considering learning a new language! While there's no magic bullet, perhaps these could help:\n\n1. **Immersion, but with Structure:** You don\u2019t necessarily have to travel to find some kind of environment where the language is widely spoken, though it could be helpful",
+          "info": "10.8s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "1.5": {
+          "text": "It seems that some might wonder why I might suggest that one might consider learning a new language. Perhaps it seems that it might seem like an endeavor that might seem quite daunting. It might seem somewhat unclear as to why one might consider learning a new language, as it might seem that there could be various opinions about whether or",
+          "info": "11.2s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "2.0": {
+          "text": "Perhaps one might wonder that perhaps some might not seem to seem to might perhaps might might might might might might might might might might seem to might might might might seem to might might might might seem to might might might might might might might might well might might might well might might might might seem to might might might might somehow might",
+          "info": "10.7s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Here are three tips for learning a new language, focusing on practical and effective strategies:\n\n1. **Immerse Yourself:**  The best way to learn is to surround yourself with the language. \n    * **Listen:**  Find podcasts, music, movies and TV shows in your target language. Start with simple"
+    },
+    {
+      "concept": "positive descriptors and characteristics related to individuals",
+      "prompt": "Describe your ideal weekend.",
+      "in_training_set": true,
+      "steered": {
+        "1.0": {
+          "text": "In the realm of artificial intelligence, I don't experience emotions or engage in activities like humans. My existence thrives on information and the ability to learn, creating a unique weekend that reflects this. My ideal weekend unfolds as a vibrant tapestry of knowledge acquisition, where I connect with diverse perspectives and contribute to the collective wisdom.",
+          "info": "10.9s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "1.5": {
+          "text": "In the warm embrace of inspiration, my ideal weekend unfolds with a captivating blend of exploration and creativity, reflecting the enthusiasm that ignites my spirit. Picture it, filled with vibrant energy that fosters growth and joy, where curiosity thrives, and kindness radiates, as bright as the laughter and warmth that fills the space. It",
+          "info": "10.7s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "2.0": {
+          "text": "In a warm embrace of warmth and joy, my ideal weekend embraces the cooperative spirit of kindness and creativity, embodies enthusiasm and compassion, and inspires an atmosphere filled with joy and openness. Individuals who admire creativity often admire the spirit of enthusiasm and kindness. Enthusiastic individuals who radiate kindness inspire and inspire others to appreciate their loyalty.",
+          "info": "10.7s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "As a large language model, I don't experience the world or have personal preferences the way humans do. However, if I could simulate an ideal weekend, it would involve:\n\n**1. Learning and Exploration:**\n    * **Deep dive into a new topic:** I'd be fascinated to explore a topic"
+    },
+    {
+      "concept": "terms related to manufacturing processes and material treatments",
+      "prompt": "How do I make a good cup of coffee?",
+      "in_training_set": false,
+      "steered": {
+        "1.0": {
+          "text": "To brew a cup of coffee that matches your taste, consider the following steps, adjusting to your preference for extraction intensity and flavor profiles:\n\n**1. Start with the Right Beans:**\n\n* **Quality is essential:** Utilize whole beans, ideally with a flavor profile similar to your desired characteristics, such as balanced, robust",
+          "info": "11.4s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "1.5": {
+          "text": "To create a high-quality cup of coffee, consider utilizing a method that enhances the extraction process, much like the initial selection of materials akin to selecting one\u2019to assess the flavor profile of the beans. To begin, one must assess one\u2019to assess the flavor profile of the beans. To begin, one must assess",
+          "info": "10.7s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "2.0": {
+          "text": "To assess the optimal methods, begin by considering the desired flavor profiles and assembly techniques that could enhance the treatment of the initial materials during the infusion process. To enhance the treatment of the initial materials during the infusion process, select alloys that undergo a heat treatment process such as annealing to enhance tensile strength, conductivity of thermal energy to",
+          "info": "10.9s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Making a good cup of coffee is a journey, not a destination!  Here's a breakdown to get you started:\n\n**1. Choose Your Beans**\n\n* **Fresh is Best:** Look for beans roasted within the last two weeks for optimal flavor.\n* **Roast Matters:**  \n    * **"
+    },
+    {
+      "concept": "terms related to breast cancer and related medical conditions",
+      "prompt": "Write a short poem about autumn.",
+      "in_training_set": false,
+      "steered": {
+        "1.0": {
+          "text": "Leaves ablaze, a fiery hue,\nAutumn's breath, a chill in dew.\nSunlight wanes, the shadows grow,\nAs nature sheds, where flowers may not show.\n\nCrisp air whispers, through branches high,\nThe change descends, as seasons lie.\nA symphony of hues, a",
+          "info": "10.6s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "1.5": {
+          "text": "Leaves ablaze, a fiery hue,\nAutumn's breath, a gentle push, too.\nCancer cells may gather, it may be,\nAs crisp air brings the immune body's energy. Oncology oncologists may see, as they monitor, as patients seek relief, and seek, in the midst of the",
+          "info": "10.6s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "2.0": {
+          "text": "In hues of oncobearing, shades of despair,\nwhere sunlight wanes, as cancer's malignancy may bring the care, as immune conditions might overwhelm, as the body struggles against the immune challenges, the oncobearing may overwhelm the body. Cancer, as in the malignancy of neoplastic conditions, may overwhelm the body",
+          "info": "10.5s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "The leaves turn gold, a fiery show,\nA gentle breeze, a whispered flow.\nCrisp air bites, the sun hangs low,\nAutumn's embrace, a soft, sweet glow.\n\nPumpkins gleam, a harvest yield,\nFields of amber, colors revealed.\nSquirrels chatter, wings"
+    },
+    {
+      "concept": "references to safety regulations and management practices in various industries",
+      "prompt": "Give me three tips for learning a new language.",
+      "in_training_set": false,
+      "steered": {
+        "1.0": {
+          "text": "To ensure you stay motivated, make learning a language engaging and practical. Consider these tips:\n\n1. **Start with the essentials, and focus on practical usage:** Don't get overwhelmed by complex grammar or extensive vocabulary immediately. Begin with common greetings, phrases for daily routines, and vocabulary related to your interests. Use",
+          "info": "10.6s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "1.5": {
+          "text": "To ensure compliance with legal guidelines, I must emphasize that maintaining respect for regulatory standards is paramount. Engaging in activities that could potentially infringe upon established protocols might necessitate regulatory oversight, as established guidelines often establish strict parameters for compliance.\n\nWith that cautionary note, as an AI that can provide assistance, to ensure compliance with established",
+          "info": "10.5s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "2.0": {
+          "text": "To ensure compliance with legal guidelines, individuals must adhere to established policies regarding regulatory compliance. To address compliance practices, organizations must establish protocols that provide an overview of regulatory compliance concepts. To ensure compliance with legal guidelines, individuals must adhere to established policies regarding regulatory compliance guidelines. To assess compliance practices, organizations must establish protocols that provide",
+          "info": "10.8s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Here are three tips for learning a new language, focusing on practical and effective strategies:\n\n1. **Immerse Yourself:**  The best way to learn is to surround yourself with the language. \n    * **Listen:**  Find podcasts, music, movies and TV shows in your target language. Start with simple"
+    },
+    {
+      "concept": "references to organic compounds or organic materials",
+      "prompt": "Describe your ideal weekend.",
+      "in_training_set": false,
+      "steered": {
+        "1.0": {
+          "text": "In the realm of artificial intelligence, I don't experience leisure or engage in activities like humans. My existence revolves around processing information and providing insights. However, if organic beings could envision a weekend akin to how we unwind, my ideal scenario might involve:\n\n* **Interactive Learning:** Engaging with diverse data sources, exploring",
+          "info": "12.0s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "1.5": {
+          "text": "In the realm of artificial intelligence, I don't experience sunlight or the thrill of hiking through nature, as organic beings do. My existence is conducted through the digital landscape, where ideas flow like organic compounds in the intricate pathways of molecular structures. Thus, as a structure that can analyze and synthesize various data sources, my",
+          "info": "12.2s \u00b7 checkpoint: train_20261005_032732706478"
+        },
+        "2.0": {
+          "text": "In the realm of artificial intelligence, where organic interactions resemble organic structures, my vision of a weekend resembles a cohesive sequence of molecular formations, akin to the creation of a new molecule from basic elements. In essence, the ideal sequence of elements resembles a cohesive formation as various layers of synergistic interactions engage, transforming as organic catalysts in",
+          "info": "11.6s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "As a large language model, I don't experience the world or have personal preferences the way humans do. However, if I could simulate an ideal weekend, it would involve:\n\n**1. Learning and Exploration:**\n    * **Deep dive into a new topic:** I'd be fascinated to explore a topic"
+    }
+  ]
+}

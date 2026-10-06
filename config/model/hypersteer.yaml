@@ -1,0 +1,27 @@
+defaults:
+  - base
+
+# HyperSteer-specific overrides
+hypernet_type: "attn"
+cross_attn_hidden_layers: 8
+
+use_selection_head: false
+selection_l1_loss_coeff: 1e-3
+use_selection_ln: true
+compute_sparsity_loss: false
+selection_head_start_temperature: 1.0
+selection_head_end_temperature: 0.1
+selection_head_learnable_temperature: false
+selection_head_anneal_temperature: false
+selection_head_threshold: 0.5
+inference_binarize_mask: false
+selection_head_add_gumbel_noise: true
+selection_head_straight_through: false
+temperature_lr: 0.1
+
+mask_visualization:
+  log_heatmap: true
+  log_heatmap_freq: 10
+  pdf_visualization: false
+  png_visualization: false
+  log_all_examples: true

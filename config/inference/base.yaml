@@ -1,0 +1,63 @@
+defaults:
+  - _self_
+use_bf16: true
+mode: "all"
+model_name: "google/gemma-2-2b-it"
+batch_infer_hypernetwork: true
+
+# Latent related params
+input_length: 128
+output_length: 128
+latent_num_of_examples: 36
+latent_batch_size: 16
+imbalance_factor: 2
+disable_neuronpedia_max_act: true
+ignore_latent_state: false
+
+# Steering related params
+steering_intervention_type: "addition"
+steering_model_name: "google/gemma-2-2b-it"
+steering_datasets: ["AlpacaEval"]
+steering_batch_size: 8
+steering_output_length: 128
+steering_layers: [20]
+steering_num_of_examples: 10
+steering_factors: [1.0]
+ignore_steering_state: false
+
+master_data_dir: "axbench/data"
+seed: 42
+lm_model: "gpt-4o-mini"
+use_cache: true
+
+# Generation related params
+temperature: 0.7
+
+# Factor selection configuration
+factor_selection:
+  enable: false
+  n_calls: 10
+  factor_min: 0.0
+  factor_max: 3.0
+  metric: "lm_judge_rating"
+  model: "HyperSteer"
+  discrete_space: false
+  discrete_steps: 10
+  log_scale: false
+  n_startup_trials: 5
+  capture_all_metrics: false
+
+run_distinct_infers: false
+infer_run: null
+overwrite_existing_infer: false
+run_eval: false
+
+# Visualization
+visualization:
+  log_heatmap: true
+  log_heatmap_freq: 10
+  pdf_visualization: false
+  png_visualization: false
+  log_all_examples: true
+
+enable_judge_verification: false 

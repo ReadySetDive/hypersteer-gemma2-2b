@@ -1,0 +1,52 @@
+defaults:
+  - _self_
+
+# Core model parameters
+model_name: HyperSteer
+target_model_name: "google/gemma-2-2b-it"
+base_model_name: "google/gemma-2-2b"
+
+# Architecture parameters
+layer: 20
+steering_layers: null
+component: "res"
+hypernet_type: "regression"
+cross_attn_hidden_layers: 8
+low_rank_dimension: 1
+topk: 8
+
+# Model behavior parameters
+intervention_positions: "all"
+intervention_type: "addition"
+exclude_bos: true
+special_tokens: []
+
+# Model-specific features
+use_selection_head: false
+use_selection_ln: true
+include_sentence_in_embedding: false
+do_reconstruction: false
+reconstruction_dict_path: null
+debug_print: false
+
+# Visualization configs
+logit_diff_visualization:
+  log_heatmap: false
+  log_heatmap_freq: 10
+  pdf_visualization: false
+  png_visualization: false
+  log_all_examples: true
+
+cross_attn_heatmap_visualization:
+  log_heatmap: false
+  log_heatmap_freq: 10
+  pdf_visualization: false
+  png_visualization: false
+  log_all_examples: true
+
+mask_visualization:
+  log_heatmap: false
+  log_heatmap_freq: 10
+  pdf_visualization: false
+  png_visualization: false
+  log_all_examples: true 

@@ -1,0 +1,51 @@
+# @package _global_
+# Base experiment - minimal overrides for basic functionality
+# This merges at root level when specified
+
+# Training overrides
+train:
+  batch_size: 4
+  test_batch_size: 4
+  save_dir: assets/checkpoints
+  run_eval_suite_at_end: true
+
+# Inference overrides
+inference:
+  latent_batch_size: 24
+  steering_batch_size: 12
+  steering_factors: [0.6, 0.8, 1.0, 1.2, 1.4]
+  temperature: 1.0
+  batch_infer_hypernetwork: false
+  ignore_latent_state: true
+  ignore_steering_state: true
+  run_distinct_infers: true
+
+  factor_selection:
+    n_calls: 15
+    factor_max: 2.0
+    model: "HyperSteer"
+    discrete_space: true
+    discrete_steps: 30
+    capture_all_metrics: true
+
+# Evaluation overrides
+evaluate:
+  report_to: "wandb"
+  run_distinct_evals: true
+
+# Dataset overrides
+dataset:
+  max_concepts: 50
+  num_of_examples: -1
+  cache_dir: assets/cache
+
+# Wandb overrides
+wandb:
+  log: true
+  project: ${oc.env:WANDB_PROJECT,axbench-hypersteer}
+  entity: ${oc.env:WANDB_ENTITY,null}
+  run_name: ${oc.env:WANDB_RUN_NAME,null}
+  run_id: ${oc.env:WANDB_RUN_ID,null}
+  group: ${oc.env:WANDB_GROUP,null}
+  tags: ${oc.env:WANDB_TAGS,null}
+  notes: ${oc.env:WANDB_NOTES,null}

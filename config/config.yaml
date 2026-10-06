@@ -1,0 +1,57 @@
+# Base configuration - uses existing config directories for defaults
+defaults:
+  - _self_
+  - dataset: axbench
+  - model: base
+  - train: base
+  - inference: base
+  - evaluate: base
+  - generate: base
+  - launcher: null # Default to base launcher, can be overridden
+  - experiment: null # This will merge at root level when specified
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+debug: false
+seed: 42
+dump_dir: null
+
+dataset:
+  train:
+    dataset_category: "instruction"
+    max_concepts: 100
+    num_of_examples: -1
+    cache_dir: "assets/cache"
+    hf_dataset_name: "pyvene/axbench-concept500"
+    hf_data_files:
+      train: "2b/l10/train/data.parquet"
+    hf_split: "train"
+    select_concept_ids: []
+  eval:
+    dataset_category: "instruction"
+    max_concepts: 100
+    num_of_examples: -1
+    cache_dir: "assets/cache"
+    hf_dataset_name: "pyvene/axbench-concept500"
+    hf_data_files:
+      train: "2b/l10/train/data.parquet"
+    hf_split: "eval"
+    select_concept_ids: []
+
+wandb:
+  log: true
+  log_code: true
+  project: ${oc.env:WANDB_PROJECT,null}
+  entity: ${oc.env:WANDB_ENTITY,null}
+  run_name: ${oc.env:WANDB_RUN_NAME,null}
+  run_id: ${oc.env:WANDB_RUN_ID,null}
+  group: ${oc.env:WANDB_GROUP,null}
+  tags: ${oc.env:WANDB_TAGS,null}
+  notes: ${oc.env:WANDB_NOTES,null}
+
+# Hydra configuration
+hydra:
+  job:
+    env_set:
+      OPENAI_DRY_RUN: 0
+      TOKENIZERS_PARALLELISM: false

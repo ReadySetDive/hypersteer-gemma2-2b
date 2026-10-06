@@ -1,0 +1,15 @@
+# @package _global_
+# GH200 optimized experiment - inherits from base with GPU-specific optimizations
+
+defaults:
+  - hypersteer
+  - _self_
+
+train:
+  batch_size: 16
+  test_batch_size: 8
+  gradient_accumulation_steps: 1
+
+inference:
+  latent_batch_size: 32
+  steering_batch_size: 32

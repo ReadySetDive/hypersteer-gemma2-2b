@@ -1,0 +1,28 @@
+defaults:
+  - base
+
+# HyperSteer-specific inference overrides
+latent_batch_size: 24
+steering_batch_size: 32
+temperature: 1.0
+run_distinct_infers: true
+batch_infer_hypernetwork: false
+ignore_latent_state: true
+ignore_steering_state: true
+
+# Enhanced steering factors for hypersteer
+steering_factors: [0.8, 1.0, 1.2, 1.4, 1.6]
+
+# Enhanced factor selection for hypersteer
+factor_selection:
+  enable: false
+  n_calls: 15
+  factor_min: 0.0
+  factor_max: 2.0
+  metric: "lm_judge_rating"
+  model: "HyperSteer"
+  discrete_space: true
+  discrete_steps: 30
+  log_scale: false
+  capture_all_metrics: true
+  n_startup_trials: 5

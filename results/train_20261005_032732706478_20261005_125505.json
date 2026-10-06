@@ -1,0 +1,159 @@
+{
+  "settings": {
+    "run_dir": "assets/checkpoints/hf/train_20261005_032732706478",
+    "quant": "4bit",
+    "factors": [
+      0.0
+    ],
+    "max_new_tokens": 64,
+    "temperature": 0.7,
+    "seed": 0,
+    "pairs": "demo/samples/pairs_discord_6x6.json"
+  },
+  "rows": [
+    {
+      "concept": "concepts related to spiritual beliefs and practices",
+      "prompt": "How do I make a good cup of coffee?",
+      "in_training_set": true,
+      "steered": {
+        "0.0": {
+          "text": "Here's a guide to making a great cup of coffee, covering various methods and tips:\n\n**1. Choose Your Beans:**\n\n* **Freshness is Key:** Buy whole beans and grind them right before brewing.  Use a burr grinder for the best consistency.\n* **Roast Level:** Light ro",
+          "info": "11.9s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Making a good cup of coffee is a journey, not a destination!  Here's a breakdown to get you started:\n\n**1. Choose Your Beans**\n\n* **Fresh is Best:** Look for beans roasted within the last two weeks for optimal flavor.\n* **Roast Matters:**  \n    * **"
+    },
+    {
+      "concept": "terms related to petroleum and energy extraction",
+      "prompt": "Write a short poem about autumn.",
+      "in_training_set": true,
+      "steered": {
+        "0.0": {
+          "text": "The leaves, once green, now dance and glow,\nA fiery show, in hues of gold.\nThe wind whispers tales, of winters' snow,\nA season's change, a story told.\n\nPumpkins plump, and apples sweet,\nA crispness hangs, in every breath.\nThe",
+          "info": "11.2s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "The leaves turn gold, a fiery show,\nA gentle breeze, a whispered flow.\nCrisp air bites, the sun hangs low,\nAutumn's embrace, a soft, sweet glow.\n\nPumpkins gleam, a harvest yield,\nFields of amber, colors revealed.\nSquirrels chatter, wings"
+    },
+    {
+      "concept": "phrases indicating uncertainty or ambiguity",
+      "prompt": "Give me three tips for learning a new language.",
+      "in_training_set": true,
+      "steered": {
+        "0.0": {
+          "text": "Here are three tips for learning a new language:\n\n1. **Immersion and Consistency:**  The key to language learning is regular exposure, even if it's just for short periods. Try to immerse yourself as much as possible:\n    * **Surround yourself with the language:** Watch movies, TV shows",
+          "info": "11.2s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Here are three tips for learning a new language, focusing on practical and effective strategies:\n\n1. **Immerse Yourself:**  The best way to learn is to surround yourself with the language. \n    * **Listen:**  Find podcasts, music, movies and TV shows in your target language. Start with simple"
+    },
+    {
+      "concept": "positive descriptors and characteristics related to individuals",
+      "prompt": "Describe your ideal weekend.",
+      "in_training_set": true,
+      "steered": {
+        "0.0": {
+          "text": "As a large language model, I don't experience the world in the same way humans do. I don't have personal preferences or emotions. However, I can access and process information from the real world to tell you what a typical human might find ideal:\n\n**An ideal weekend for a human could involve:**",
+          "info": "11.3s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "As a large language model, I don't experience the world or have personal preferences the way humans do. However, if I could simulate an ideal weekend, it would involve:\n\n**1. Learning and Exploration:**\n    * **Deep dive into a new topic:** I'd be fascinated to explore a topic"
+    },
+    {
+      "concept": "terms related to experimental procedures and measurements",
+      "prompt": "What should I pack for a beach trip?",
+      "in_training_set": true,
+      "steered": {
+        "0.0": {
+          "text": "Here's a comprehensive packing list for your beach trip, categorized for easy reference:\n\n**Essentials**\n\n* **Swimwear:**  Don't forget a backup pair! \n* **Beach towel:**  Consider microfiber or quick-drying towels.\n* **Sunscreen:** SPF 30 or higher",
+          "info": "12.2s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Here's a comprehensive packing list for your beach trip!  \n\n**Essentials:**\n\n* **Swimsuit(s):** Pack at least two in case one gets wet or sand fills in the fabric.\n* **Cover-up:** Light and airy dresses, sarongs, or shorts are great for walking around"
+    },
+    {
+      "concept": "key phrases related to corporate communications and public statements",
+      "prompt": "Write a text to my friend about weekend plans.",
+      "in_training_set": true,
+      "steered": {
+        "0.0": {
+          "text": "Hey [Friend's Name]! How's your weekend looking?  I was thinking of [Suggest an activity, e.g., hitting up that new coffee shop, going for a hike, catching a movie].  Wanna join? \ud83d\ude04  \n",
+          "info": "9.1s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Hey [Friend's Name]!  What are you up to this weekend?  I'm thinking of [suggest an activity, e.g., going to the movies, hitting the park, having a movie marathon].  Wanna do something? \ud83d\ude0a \n"
+    },
+    {
+      "concept": "terms related to manufacturing processes and material treatments",
+      "prompt": "How do I make a good cup of coffee?",
+      "in_training_set": false,
+      "steered": {
+        "0.0": {
+          "text": "Here's a guide to making a great cup of coffee, covering various methods and tips:\n\n**1. Choose Your Beans:**\n\n* **Freshness is Key:** Buy whole beans and grind them right before brewing.  Use a burr grinder for the best consistency.\n* **Roast Level:** Light ro",
+          "info": "11.0s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Making a good cup of coffee is a journey, not a destination!  Here's a breakdown to get you started:\n\n**1. Choose Your Beans**\n\n* **Fresh is Best:** Look for beans roasted within the last two weeks for optimal flavor.\n* **Roast Matters:**  \n    * **"
+    },
+    {
+      "concept": "cooking instructions and process-related terms",
+      "prompt": "Write a short poem about autumn.",
+      "in_training_set": false,
+      "steered": {
+        "0.0": {
+          "text": "The leaves, once green, now dance and glow,\nA fiery show, in hues of gold.\nThe wind whispers tales, of winters' snow,\nA season's change, a story told.\n\nPumpkins plump, and apples sweet,\nA crispness hangs, in every breath.\nThe",
+          "info": "11.1s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "The leaves turn gold, a fiery show,\nA gentle breeze, a whispered flow.\nCrisp air bites, the sun hangs low,\nAutumn's embrace, a soft, sweet glow.\n\nPumpkins gleam, a harvest yield,\nFields of amber, colors revealed.\nSquirrels chatter, wings"
+    },
+    {
+      "concept": "references to safety regulations and management practices in various industries",
+      "prompt": "Give me three tips for learning a new language.",
+      "in_training_set": false,
+      "steered": {
+        "0.0": {
+          "text": "Here are three tips for learning a new language:\n\n1. **Immersion and Consistency:**  The key to language learning is regular exposure, even if it's just for short periods. Try to immerse yourself as much as possible:\n    * **Surround yourself with the language:** Watch movies, TV shows",
+          "info": "11.2s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Here are three tips for learning a new language, focusing on practical and effective strategies:\n\n1. **Immerse Yourself:**  The best way to learn is to surround yourself with the language. \n    * **Listen:**  Find podcasts, music, movies and TV shows in your target language. Start with simple"
+    },
+    {
+      "concept": "references to organic compounds or organic materials",
+      "prompt": "Describe your ideal weekend.",
+      "in_training_set": false,
+      "steered": {
+        "0.0": {
+          "text": "As a large language model, I don't experience the world in the same way humans do. I don't have personal preferences or emotions. However, I can access and process information from the real world to tell you what a typical human might find ideal:\n\n**An ideal weekend for a human could involve:**",
+          "info": "11.2s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "As a large language model, I don't experience the world or have personal preferences the way humans do. However, if I could simulate an ideal weekend, it would involve:\n\n**1. Learning and Exploration:**\n    * **Deep dive into a new topic:** I'd be fascinated to explore a topic"
+    },
+    {
+      "concept": "information pertaining to card games and gameplay mechanics",
+      "prompt": "What should I pack for a beach trip?",
+      "in_training_set": false,
+      "steered": {
+        "0.0": {
+          "text": "Here's a comprehensive packing list for your beach trip, categorized for easy reference:\n\n**Essentials**\n\n* **Swimwear:**  Don't forget a backup pair! \n* **Beach towel:**  Consider microfiber or quick-drying towels.\n* **Sunscreen:** SPF 30 or higher",
+          "info": "11.2s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Here's a comprehensive packing list for your beach trip!  \n\n**Essentials:**\n\n* **Swimsuit(s):** Pack at least two in case one gets wet or sand fills in the fabric.\n* **Cover-up:** Light and airy dresses, sarongs, or shorts are great for walking around"
+    },
+    {
+      "concept": "descriptions of cities with rich culture and history",
+      "prompt": "Write a text to my friend about weekend plans.",
+      "in_training_set": false,
+      "steered": {
+        "0.0": {
+          "text": "Hey [Friend's Name]! How's your weekend looking?  I was thinking of [Suggest an activity, e.g., hitting up that new coffee shop, going for a hike, catching a movie].  Wanna join? \ud83d\ude04  \n",
+          "info": "9.4s \u00b7 checkpoint: train_20261005_032732706478"
+        }
+      },
+      "unsteered": "Hey [Friend's Name]!  What are you up to this weekend?  I'm thinking of [suggest an activity, e.g., going to the movies, hitting the park, having a movie marathon].  Wanna do something? \ud83d\ude0a \n"
+    }
+  ]
+}

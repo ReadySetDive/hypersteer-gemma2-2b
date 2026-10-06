@@ -1,0 +1,10 @@
+[
+  ["concepts related to spiritual beliefs and practices", "How do I make a good cup of coffee?", true],
+  ["terms related to petroleum and energy extraction", "Write a short poem about autumn.", true],
+  ["phrases indicating uncertainty or ambiguity", "Give me three tips for learning a new language.", true],
+  ["positive descriptors and characteristics related to individuals", "Describe your ideal weekend.", true],
+  ["terms related to manufacturing processes and material treatments", "How do I make a good cup of coffee?", false],
+  ["terms related to breast cancer and related medical conditions", "Write a short poem about autumn.", false],
+  ["references to safety regulations and management practices in various industries", "Give me three tips for learning a new language.", false],
+  ["references to organic compounds or organic materials", "Describe your ideal weekend.", false]
+]

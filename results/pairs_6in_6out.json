@@ -1,0 +1,14 @@
+[
+  ["concepts related to spiritual beliefs and practices", "How do I make a good cup of coffee?", true],
+  ["terms related to petroleum and energy extraction", "Write a short poem about autumn.", true],
+  ["phrases indicating uncertainty or ambiguity", "Give me three tips for learning a new language.", true],
+  ["positive descriptors and characteristics related to individuals", "Describe your ideal weekend.", true],
+  ["terms related to experimental procedures and measurements", "What should I pack for a beach trip?", true],
+  ["key phrases related to corporate communications and public statements", "Write a text to my friend about weekend plans.", true],
+  ["terms related to manufacturing processes and material treatments", "How do I make a good cup of coffee?", false],
+  ["cooking instructions and process-related terms", "Write a short poem about autumn.", false],
+  ["references to safety regulations and management practices in various industries", "Give me three tips for learning a new language.", false],
+  ["references to organic compounds or organic materials", "Describe your ideal weekend.", false],
+  ["information pertaining to card games and gameplay mechanics", "What should I pack for a beach trip?", false],
+  ["descriptions of cities with rich culture and history", "Write a text to my friend about weekend plans.", false]
+]

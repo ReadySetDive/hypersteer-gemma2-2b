@@ -1,0 +1,9 @@
+defaults:
+  - base
+
+# HyperSteer-specific evaluation overrides
+run_winrate: false
+winrate_baseline: "PromptSteering"
+report_to: "wandb"
+run_distinct_evals: true
+overwrite_existing_eval: false 
