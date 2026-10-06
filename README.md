@@ -7,7 +7,7 @@ This repo contains:
 - **Two Gradio demos:** a side-by-side comparison app, and a *live* app that bends a generation mid-stream.
 - **Trained weights** in the Hugging Face repo [`RSD002/hypersteer-gemma2-2b-l20`](https://huggingface.co/RSD002/hypersteer-gemma2-2b-l20) (private; ask for access). The demos download them automatically.
 
-Built on the HyperSteer research code from [HyperStuff/hypersteer](https://github.com/HyperStuff/hypersteer) (the `hypersteer/` package and `config/`), with changes for single-GPU training, resumability and fast inference. See [Credits](#credits).
+Built on the HyperSteer research code released in [stanfordnlp/axbench](https://github.com/stanfordnlp/axbench) (Apache-2.0), via the restructured [HyperStuff/hypersteer](https://github.com/HyperStuff/hypersteer) (the `hypersteer/` package and `config/`), with changes for single-GPU training, resumability and fast inference. See [Credits](#credits) and [`NOTICE`](NOTICE).
 
 ## Results
 
@@ -82,4 +82,8 @@ results/             sample outputs + results table for the final run
 ## Credits
 
 - HyperSteer: Jiuding Sun, Sidharth Baskaran, Zhengxuan Wu, Michael Sklar, Christopher Potts, Atticus Geiger. *HyperSteer: Activation Steering at Scale with Hypernetworks*, arXiv:2506.03292 (2025).
-- Base code: [HyperStuff/hypersteer](https://github.com/HyperStuff/hypersteer), built on [AxBench](https://github.com/stanfordnlp/axbench) and [pyvene](https://github.com/stanfordnlp/pyvene). Data: [`pyvene/axbench-concept16k`](https://huggingface.co/datasets/pyvene/axbench-concept16k). Model: Google Gemma-2-2B-it (Gemma license).
+- Base code: [AxBench](https://github.com/stanfordnlp/axbench) (Apache-2.0, where the HyperSteer code was released) via [HyperStuff/hypersteer](https://github.com/HyperStuff/hypersteer), using [pyvene](https://github.com/stanfordnlp/pyvene). Data: [`pyvene/axbench-concept16k`](https://huggingface.co/datasets/pyvene/axbench-concept16k). Model: Google Gemma-2-2B-it ([Gemma Terms of Use](https://ai.google.dev/gemma/terms)).
+
+## License
+
+Apache License 2.0, the same as the upstream AxBench code. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE) for attribution and a summary of our modifications.

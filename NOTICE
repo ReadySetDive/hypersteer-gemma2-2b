@@ -1,0 +1,28 @@
+HyperSteer on Gemma-2-2B (CSCI 544, Team 28)
+Copyright 2026 Matthew Gordy
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It includes software derived from:
+
+  AxBench (https://github.com/stanfordnlp/axbench)
+  Licensed under the Apache License, Version 2.0.
+  The HyperSteer model and hypernetwork code (axbench/models/hypersteer.py,
+  axbench/models/hypernet/) were released there by the HyperSteer authors.
+
+  HyperStuff/hypersteer (https://github.com/HyperStuff/hypersteer)
+  A restructured HyperSteer codebase built on the AxBench code above; the
+  hypersteer/ package and config/ in this repository come from it.
+
+Modifications in this repository include: resumable training (trainer, sampler,
+train.py), RunPod training and monitoring scripts (scripts/), a pyvene>=0.1.8
+compatibility fix, a lean/temperature-0 inference path, the Gradio demos and
+tooling in demo/, and the results in results/.
+
+HyperSteer: Jiuding Sun, Sidharth Baskaran, Zhengxuan Wu, Michael Sklar,
+Christopher Potts, Atticus Geiger. "HyperSteer: Activation Steering at Scale with
+Hypernetworks", arXiv:2506.03292 (2025).
+
+Trained weights referenced by this code are intended for use with Google's
+Gemma-2-2B-it and are subject to the Gemma Terms of Use
+(https://ai.google.dev/gemma/terms).
